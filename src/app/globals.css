@@ -106,3 +106,30 @@
   transform: rotate(0deg); /* Adjust the angle as needed */
   transition: transform 0.3s ease; /* Optional: for smooth rotation */
 }
+
+
+
+.transition-transform {
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+
+.zoomable-div:hover {
+  transform: scale(1.05); /* Zoom in effect */
+}
+
+.zoom-in {
+  transform: scale(1.07);
+}
+
+.zoom-out {
+  transform: scale(1);
+}
+
+.zoomable-div {
+  /* Ensure the box scales properly */
+  transition: transform 0.5s;
+}
+
+
