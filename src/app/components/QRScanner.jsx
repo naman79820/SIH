@@ -8,15 +8,34 @@ const QRScanner = () => {
 
   const handleScan = async (data) => {
     if (data) {
-      try {
-        const response = await axios.get(`/api/products/${data}`);
-        setProduct(response.data);
-        setError('');
-      } catch (err) {
-        setError('Failed to fetch product details.');
+      console.log("Scanned data:", data); // Log the scanned data to inspect the structure
+  
+      // Assuming the `data` object has a 'text' property that contains the URL or relevant info
+      const scannedText = typeof data === 'string' ? data : data.text; // Extract 'text' if data is an object
+      
+      // Check if the scannedText is a URL and extract the product ID
+      const urlPattern = /http:\/\/localhost:3000\/product\/([0-9a-fA-F]{24})/;
+      const match = scannedText.match(urlPattern);
+  
+      if (match && match[1]) {
+        const productId = match[1]; // Extract the product ID from the URL
+        console.log("Extracted product ID:", productId);
+  
+        try {
+          const response = await axios.get(`/api/products/${productId}`);
+          setProduct(response.data);
+          setError('');
+        } catch (err) {
+          console.error("Error fetching product details:", err);
+          setError('Failed to fetch product details.');
+        }
+      } else {
+        setError('Invalid QR code scanned.');
       }
     }
   };
+  
+  
 
   const handleError = (err) => {
     console.error(err);
