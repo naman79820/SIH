@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../util/sih_logo_2024.png';
+import logo from '../util/hashtag.jpg'
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link'; // Import Link from Next.js
@@ -9,18 +9,18 @@ const Header = () => {
   return (
     <div style={{ fontFamily: 'Anton, sans-serif' }}>
       <Head>
-        <title>Your Site Title</title> {/* Set the title of your page */}
+        <title>hashtag.jemtec</title> 
       </Head>
-      <div className='flex w-full h-20 items-center justify-between'>
+      <div className='flex w-full h-20 items-center justify-between mt-2'>
         <div className='ml-5'>
-          <Image src={logo} alt="Logo" width={150} height={150} />
+          <Image src={logo} alt="Logo" width={80} height={80} />
         </div>
         <div className='flex'>
-          <ul className='flex gap-10 text-lg cursor-pointer'>
-            <li className='hover:font-bold'>Lorem</li>
-            <li className='hover:font-bold'>Lorem</li>
-            <li className='hover:font-bold'>lorem</li>
-            <li className='hover:font-bold'>lorem</li>
+          <ul className='flex gap-10 text-xl cursor-pointer'>
+            <li className='hover:font-bold'>Home </li>
+            <li className='hover:font-bold'>About Us</li>
+            <li className='hover:font-bold'>Contact us</li>
+            <li className='hover:font-bold'>Feedback</li>
           </ul>
         </div>
         <div className='flex pr-5 gap-5'>
