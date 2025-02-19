@@ -5,7 +5,7 @@ import Image from 'next/image'; // Make sure this is imported
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'; // Link for navigation
-import logo from '../../util/sih_logo_2024.png';
+import logo from '../../util/hashtag.jpg';
 
 const CreateAccount = () => {
   const [username, setUsername] = useState('');

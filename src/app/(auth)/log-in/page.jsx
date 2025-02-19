@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link'; // Import Link for navigation
 import { LoaderIcon } from 'lucide-react' // Import your loader icon component or use an appropriate one
-import logo from '../../util/sih_logo_2024.png';
+import logo from '../../util/hashtag.jpg';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
